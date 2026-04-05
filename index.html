@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Emergency site om atomtrussel, overlevelse og indberetning under en nødsituation.">
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/general.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/burger.css">
+  <link rel="stylesheet" href="css/cards.css">
+  <link rel="stylesheet" href="css/custom.css">
+  <link rel="icon" type="image/png" href="img/fav.png">
+  <title>Emergency Site | Forside</title>
+</head>
+<body id="frontpage">
+  <header class="site-header">
+    <nav class="nav-container">
+      <div id="logotype-wrapper" class="logo">
+        <a class="logo-mark" href="https://da.wikipedia.org/wiki/Den_kolde_krig" target="_blank" rel="noopener noreferrer" aria-label="Læs om Den kolde krig på Wikipedia"><span>KOLD</span><span>KRIG</span></a>
+      </div>
+
+      <ul class="menu">
+        <li><a class="menuItem active" href="index.html">Forside</a></li>
+        <li><a class="menuItem" href="instruction.html">Nærkontakt</a></li>
+        <li><a class="menuItem" href="register.html">Indberet</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Skift mellem lyst og mørkt tema">Skift tema</button>
+        <button class="burger" type="button" aria-label="Åbn menu" aria-expanded="false">
+          <span class="line"></span>
+          <span class="line"></span>
+          <span class="line"></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="front-hero">
+      <div class="front-hero__content">
+        <p class="eyebrow">Emergency Site</p>
+        <h1>Hvis atomtruslen bliver virkelig</h1>
+        <div class="front-hero__steps" aria-label="Tre trin gennem krisen">
+          <article class="step-chip">
+            <button class="step-chip__number step-chip__number--link step-chip__number--nav" type="button" data-href="instruction.html" aria-label="Gå til nærkontakt"><span>01</span></button>
+            <div>
+              <h2>Få overblik</h2>
+              <p>Læs infografikken og forstå reaktion før, under og efter nedslag.</p>
+            </div>
+          </article>
+          <article class="step-chip">
+            <button class="step-chip__number step-chip__number--link step-chip__number--nav" type="button" data-href="register.html" aria-label="Gå til indberetning"><span>02</span></button>
+            <div>
+              <h2>Meld din status</h2>
+              <p>Indsend placering, behov og tilstand, så situationen samles hurtigt.</p>
+            </div>
+          </article>
+          <article class="step-chip step-chip--utility">
+            <button id="theme-toggle-card" class="step-chip__number step-chip__number--link" type="button" aria-label="Skift tema"><span>03</span></button>
+            <div>
+              <h2>Tilpas visningen</h2>
+              <p>Skift tema, hvis du vil dæmpe lys og skabe ro i læsningen.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <aside class="front-hero__aside" aria-label="Visuelt arkivpanel">
+        <div class="front-hero__image framed-media">
+          <img src="img/146155112.webp" alt="Hånd peger på kort og militære planer på et bord">
+        </div>
+
+        <div class="front-hero__image framed-media">
+          <img src="img/standard_Kbh_200_kt.png" alt="Kort over eksplosionsradius i København">
+        </div>
+      </aside>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <nav class="footer-nav">
+      <ul>
+        <li><a href="index.html">Forside</a></li>
+        <li><a href="instruction.html">Nærkontakt</a></li>
+        <li><a href="register.html">Indberet</a></li>
+      </ul>
+      <ul>
+        <li><a href="#">Beredskab</a></li>
+        <li><a href="#">Arkiv</a></li>
+        <li><a href="#">Kontakt</a></li>
+      </ul>
+      <ul>
+        <li><a href="#">Privatliv</a></li>
+        <li><a href="#">Tilgængelighed</a></li>
+        <li><a href="404.html">404</a></li>
+      </ul>
+    </nav>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    const stepChipNavButtons = document.querySelectorAll('.step-chip__number--nav');
+    stepChipNavButtons.forEach((button) => {
+      button.addEventListener('click', () => {
+        const href = button.getAttribute('data-href');
+        if (href) window.location.href = href;
+      });
+    });
+  </script>
+</body>
+</html>

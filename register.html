@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Webformular til indberetning af situation, placering og behov under en nødsituation.">
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/general.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/burger.css">
+  <link rel="stylesheet" href="css/cards.css">
+  <link rel="stylesheet" href="css/form.css">
+  <link rel="stylesheet" href="css/custom.css">
+  <link rel="icon" type="image/png" href="img/fav.png">
+  <title>Emergency Site | Indberet</title>
+</head>
+<body id="register">
+  <header class="site-header">
+    <nav class="nav-container">
+      <div id="logotype-wrapper" class="logo">
+        <a class="logo-mark" href="https://da.wikipedia.org/wiki/Den_kolde_krig" target="_blank" rel="noopener noreferrer" aria-label="Læs om Den kolde krig på Wikipedia"><span>KOLD</span><span>KRIG</span></a>
+      </div>
+
+      <ul class="menu">
+        <li><a class="menuItem" href="index.html">Forside</a></li>
+        <li><a class="menuItem" href="instruction.html">Nærkontakt</a></li>
+        <li><a class="menuItem active" href="register.html">Indberet</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Skift mellem lyst og mørkt tema">Skift tema</button>
+        <button class="burger" type="button" aria-label="Åbn menu" aria-expanded="false">
+          <span class="line"></span>
+          <span class="line"></span>
+          <span class="line"></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-intro template-heading-block">
+      
+      <h1>Indberet</h1>
+      <p class="subheading">Registrér din placering, tilstand og behov</p>
+    </section>
+
+    <section id="form-section">
+      <div class="register-visual-column">
+        <article id="form-info" class="card-shell">
+          <h2>Registrering af nødsituation</h2>
+          <p>
+            Formularen er designet til at indsamle oplysninger, der kan være vigtige i en akut situation.
+            Brugeren kan indtaste navn, placering, tilstand, antal personer, behov og ekstra information.
+          </p>
+          <p>
+            Når formularen sendes, bliver indholdet behandlet med JavaScript og vist som en opsummering på siden
+            uden at reloade browseren.
+          </p>
+        </article>
+
+        <div class="framed-media register-control-room">
+          <img src="img/standard_Minutemann_III_launch_control_room.jpg" alt="Kontrolrum med militært udstyr">
+        </div>
+
+        <div class="framed-media register-archive-photo">
+          <img src="img/arkiv-foto-sort-hvid.avif" alt="Sort hvidt arkivfoto med civile og soldat under øvelse">
+        </div>
+      </div>
+
+      <form id="webform" class="card-shell">
+        <div class="form-group">
+          <label for="fullname">Fulde navn</label>
+          <input type="text" id="fullname" name="fullname" placeholder="Skriv dit navn" required>
+        </div>
+
+        <div class="form-group">
+          <label for="location">Placering</label>
+          <input type="text" id="location" name="location" placeholder="By, område eller beskyttelsesrum" required>
+        </div>
+
+        <div class="form-group">
+          <label for="people">Antal personer</label>
+          <input type="number" id="people" name="people" min="1" max="20" value="1" required>
+        </div>
+
+        <div class="form-group">
+          <label for="status">Din tilstand</label>
+          <select id="status" name="status" required>
+            <option value="">Vælg status</option>
+            <option value="Uskadt">Uskadt</option>
+            <option value="Lettere skadet">Lettere skadet</option>
+            <option value="Alvorligt skadet">Alvorligt skadet</option>
+            <option value="Forurenet af nedfald">Forurenet af nedfald</option>
+          </select>
+        </div>
+
+        <fieldset>
+          <legend>Hvilke behov har du?</legend>
+          <label><input type="checkbox" name="needs" value="Vand"> Vand</label>
+          <label><input type="checkbox" name="needs" value="Mad"> Mad</label>
+          <label><input type="checkbox" name="needs" value="Medicin"> Medicin</label>
+          <label><input type="checkbox" name="needs" value="Ly"> Ly</label>
+          <label><input type="checkbox" name="needs" value="Transport"> Transport</label>
+          <label><input type="checkbox" name="needs" value="Kontakt til familie"> Kontakt til familie</label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Er området sikkert?</legend>
+          <label><input type="radio" name="safety" value="Ja" required> Ja</label>
+          <label><input type="radio" name="safety" value="Nej"> Nej</label>
+          <label><input type="radio" name="safety" value="Usikkert"> Usikkert</label>
+        </fieldset>
+
+        <div class="form-group">
+          <label for="message">Ekstra information</label>
+          <textarea id="message" name="message" rows="6" placeholder="Beskriv situationen kort"></textarea>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="button">Indsend indberetning</button>
+          <button type="reset" class="button button_secondary">Nulstil</button>
+        </div>
+      </form>
+    </section>
+
+    <section id="form-summary" class="card-shell">
+      <h2>Opsummering</h2>
+      <article>
+        <p id="summary-output">Udfyld formularen og tryk på indsend for at se en opsummering her.</p>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <nav class="footer-nav">
+      <ul>
+        <li><a href="index.html">Forside</a></li>
+        <li><a href="instruction.html">Nærkontakt</a></li>
+        <li><a href="register.html">Indberet</a></li>
+      </ul>
+      <ul>
+        <li><a href="#">Beredskab</a></li>
+        <li><a href="#">Arkiv</a></li>
+        <li><a href="#">Kontakt</a></li>
+      </ul>
+      <ul>
+        <li><a href="#">Privatliv</a></li>
+        <li><a href="#">Tilgængelighed</a></li>
+        <li><a href="404.html">404</a></li>
+      </ul>
+    </nav>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/register.js"></script>
+</body>
+</html>

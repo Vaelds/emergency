@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Interaktiv infografik om hvordan man reagerer på atombomber og fjendtlige soldater.">
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/general.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/burger.css">
+  <link rel="stylesheet" href="css/cards.css">
+  <link rel="stylesheet" href="css/infographic.css">
+  <link rel="stylesheet" href="css/custom.css">
+  <link rel="icon" type="image/png" href="img/fav.png">
+  <title>Emergency Site | Nærkontakt</title>
+</head>
+<body id="instruction">
+  <header class="site-header">
+    <nav class="nav-container">
+      <div id="logotype-wrapper" class="logo">
+        <a class="logo-mark" href="https://da.wikipedia.org/wiki/Den_kolde_krig" target="_blank" rel="noopener noreferrer" aria-label="Læs om Den kolde krig på Wikipedia"><span>KOLD</span><span>KRIG</span></a>
+      </div>
+
+      <ul class="menu">
+        <li><a class="menuItem" href="index.html">Forside</a></li>
+        <li><a class="menuItem active" href="instruction.html">Nærkontakt</a></li>
+        <li><a class="menuItem" href="register.html">Indberet</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Skift mellem lyst og mørkt tema">Skift tema</button>
+        <button class="burger" type="button" aria-label="Åbn menu" aria-expanded="false">
+          <span class="line"></span>
+          <span class="line"></span>
+          <span class="line"></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-intro template-heading-block">
+      
+      <h1>Nærkontakt</h1>
+      <p class="subheading">Tryk på en bombe eller en soldat</p>
+    </section>
+
+    <section class="instruction-layout">
+      <section class="visual-column">
+        <section class="info-graphic card-shell">
+          <object
+            id="infographic-object"
+            data="img/russer_abombe.svg"
+            type="image/svg+xml"
+            aria-label="Interaktiv infografik om atomtrussel"
+          ></object>
+        </section>
+      </section>
+
+      <section class="info-text">
+        <h2 id="info-title">Vælg en bombe eller en soldat</h2>
+
+        <article class="text-panel">
+          <p id="info-description">
+            Tryk på de røde markeringer i grafikken for at læse, hvad du bør gøre i de forskellige situationer,
+            og hvilke forholdsregler der er vigtigst at huske undervejs.
+          </p>
+        </article>
+
+        <aside id="efficiency" class="info-box">
+          <h3>Handling</h3>
+          <ul id="efficiency-list">
+            <li>Søg straks dækning</li>
+            <li>Undgå åbne områder</li>
+            <li>Hold dig orienteret</li>
+          </ul>
+        </aside>
+
+        <aside id="requirement" class="info-box">
+          <h3>Vigtigt</h3>
+          <ul id="requirement-list">
+            <li>Bevar roen</li>
+            <li>Beskyt hoved og luftveje</li>
+            <li>Følg instruktionerne trin for trin</li>
+          </ul>
+        </aside>
+      </section>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <nav class="footer-nav">
+      <ul>
+        <li><a href="index.html">Forside</a></li>
+        <li><a href="instruction.html">Nærkontakt</a></li>
+        <li><a href="register.html">Indberet</a></li>
+      </ul>
+      <ul>
+        <li><a href="#">Beredskab</a></li>
+        <li><a href="#">Arkiv</a></li>
+        <li><a href="#">Kontakt</a></li>
+      </ul>
+      <ul>
+        <li><a href="#">Privatliv</a></li>
+        <li><a href="#">Tilgængelighed</a></li>
+        <li><a href="404.html">404</a></li>
+      </ul>
+    </nav>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/instruction.js"></script>
+</body>
+</html>
