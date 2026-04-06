@@ -149,6 +149,7 @@ ul {
 .logo-mark span {
   display: block;
   width: max-content;
+  white-space: nowrap;
 }
 
 .logo-mark::before,
@@ -1818,6 +1819,7 @@ body.dark #frontpage .step-chip__number.step-chip__number--link span {
   cursor: pointer !important;
 }
 
+
 /* ===== Logo lines always red ===== */
 #logotype-wrapper .logo-mark::before,
 #logotype-wrapper .logo-mark::after {
@@ -1904,4 +1906,9 @@ footer li, .footer li, .site-footer li {
   footer li, .footer li, .site-footer li {
     margin: 6px 0 !important;
   }
+}
+
+
+#logotype-wrapper .logo-mark span:last-child {
+  letter-spacing: 0.18em;
 }
