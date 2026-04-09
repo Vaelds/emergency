@@ -1,0 +1,101 @@
+/* Requested fixes for v18 */
+
+/* Nærkontakt mobile: remove the outer background box so the page matches the other mobile pages */
+@media (max-width: 768px) {
+  #instruction .instruction-layout {
+    background: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    padding: 0 !important;
+  }
+}
+
+/* Indberet: cross-fade from the original image to the supplied black-and-white version on hover */
+#register .register-archive-photo {
+  position: relative !important;
+  aspect-ratio: 1 / 1 !important;
+  overflow: hidden !important;
+  isolation: isolate !important;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  border-radius: 24px !important;
+}
+
+#register .register-archive-photo::before {
+  display: none !important;
+  content: none !important;
+}
+
+#register .register-archive-photo img {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: center !important;
+  aspect-ratio: auto !important;
+  border-radius: inherit !important;
+  filter: none !important;
+  background: transparent !important;
+  transition: opacity 320ms ease !important;
+}
+
+#register .register-archive-photo::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: url('../img/arkiv-foto-sort-hvid.png') center / cover no-repeat;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 320ms ease;
+}
+
+#register .register-archive-photo:hover img,
+#register .register-archive-photo:focus-within img {
+  opacity: 0;
+}
+
+#register .register-archive-photo:hover::after,
+#register .register-archive-photo:focus-within::after {
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #register .register-archive-photo img,
+  #register .register-archive-photo::after {
+    transition: none !important;
+  }
+}
+
+
+/* ===== v23: Nærkontakt info-panel fade animation ===== */
+#instruction .text-panel,
+#instruction .info-box {
+  visibility: visible;
+}
+
+#instruction .text-panel.fadeIn,
+#instruction .info-box.fadeIn {
+  animation: vaultInfoFadeIn 0.45s ease both;
+}
+
+@keyframes vaultInfoFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #instruction .text-panel.fadeIn,
+  #instruction .info-box.fadeIn {
+    animation: none !important;
+  }
+}
